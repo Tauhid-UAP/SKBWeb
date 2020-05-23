@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shotokan Karate Bangladesh</title>
+</head>
+<body>
+
+    <div id="container">
+
+        <div id="header" class="text-center p-3 mb-2 bg-primary text-white">
+
+            <h1>
+
+                <img src="media/images/cat.jpeg" class="rounded float-left">
+
+                This is the official website of Shotokan Karate Bangladesh.
+
+            </h1>
+
+        </div>
+
+
+
+        <div class="btn-group-lg text-center p-3 mb-2 bg-dark text-white" role="group" aria-label="Basic example">
+
+            <a class="btn btn-outline-primary" href="{% url 'home_page' %}" role="button">Home</a>
+            <a class="btn btn-outline-primary" href="{% url 'view_schedule' %}" role="button">Schedule</a>
+            <a class="btn btn-outline-primary" href="{% url 'view_syllabus' %}" role="button">Syllabus</a>
+            <a class="btn btn-outline-primary" href="{% url 'view_records' %}" role="button">Records</a>
+            <a class="btn btn-outline-primary" href="{% url 'view_highlights' %}" role="button">Highlights</a>
+            <a class="btn btn-outline-primary" href="{% url 'view_achievements' %}" role="button">Achievements</a>
+            <a class="btn btn-outline-primary" href="{% url 'view_gallery' %}" role="button">Gallery</a>
+            <a class="btn btn-outline-primary" href="{% url 'view_contact' %}" role="button">Contact</a>
+            <a class="btn btn-outline-primary" href="{% url 'about' %}" role="button">About Us</a>
+
+        </div>
+
+        {% block override %}
+
+        {% endblock %}
+
+
+        <div id="footer" class="text-center">
+
+            Copyright &copy; 2019 Mohammad Joshim Uddin and Kamruzzaman Tauhid.
+
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

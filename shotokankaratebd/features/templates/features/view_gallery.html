@@ -1,0 +1,18 @@
+{% extends 'hp.html' %}
+
+{% block override %}
+
+    <div id="gallery-space" class="text-center">
+
+    {% csrf_token %}
+    {% for photo in photo_list.all %}
+
+        <img src="{{ photo.image.url }}" width="240">
+        <h2> {{ photo.pub_date }} </h2>
+        <br>
+
+    {% endfor %}
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'hp.html' %}
+
+{% block override %}
+
+    <div id="contact-space" class="text-center">
+
+    {% csrf_token %}
+    {% for contact in contact_list.all %}
+
+        <img src="{{ contact.image.url }}" width="240">
+        <h2> {{ contact.name }} </h2>
+        <br>
+        <h2> {{ contact.role }} </h2>
+        <br>
+        <h2> Phone Number: {{ contact.phone_number }} </h2>
+        <br>
+        {% if contact.email_address %}
+            <h2> Email: {{ contact.email_address }} </h2>
+            <br>
+        {% endif %}
+
+    {% endfor %}
+
+    </div>
+
+{% endblock %}
